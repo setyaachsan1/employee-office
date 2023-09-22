@@ -1,0 +1,35 @@
+<div class="topContainer">
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true">
+      <div class="signup">
+        <form>
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" name="txt" placeholder="User name" [(ngModel)]="signupObj.userName">
+          <input type="email" name="email" placeholder="Email" [(ngModel)]="signupObj.email">
+          <!-- <input type="password" name="pswd" placeholder="Password" [(ngModel)]="signupObj.password"> -->
+          <input [type]="changetype?'password':'text'" name="pswd" placeholder="Password" class="form-control" [(ngModel)]="signupObj.password">
+          <div class="eyeicon" (click)="viewpass()">
+            <span><fa-icon [icon]="eyeIcon" *ngIf="visible"></fa-icon>
+            <fa-icon [icon]="eyeSlashIcon" *ngIf="!visible"></fa-icon></span>
+          </div>
+          <button (click)="onSignUp()">Sign up</button>
+        </form>
+      </div>
+  
+      <div class="login">
+        <form>
+          <label for="chk" aria-hidden="true">Login</label>
+          <input type="text" name="userName" placeholder="User Name"  [(ngModel)]="loginObj.EmailId">
+          <input [type]="changetype?'password':'text'" placeholder="Password" class="form-control" [(ngModel)]="loginObj.Password">
+          <div class="eyeicon" (click)="viewpass()">
+            <span><fa-icon [icon]="eyeIcon" *ngIf="visible"></fa-icon>
+            <fa-icon [icon]="eyeSlashIcon" *ngIf="!visible"></fa-icon></span>
+          </div>
+          <span class="button"><button (click)="onLogin()">Login</button></span>
+        </form>
+      </div>
+
+     
+    </div>
+  </div>
+  

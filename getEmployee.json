@@ -1,0 +1,104 @@
+{
+    "data":[
+        {
+            "firstName":"Vincent",
+            "lastName": "Bramantyo",
+            "department": "Sales",
+            "departmentId": "1",
+            "gender":"Male",
+            "email":"vincent@gmail.com",
+            "phoneNo":"9988776655",
+            "username":"vincent"
+        },
+        {
+            "firstName":"Sarah",
+            "lastName": "Connor",
+            "department": "Marketing",
+            "departmentId": "2",
+            "gender":"Female",
+            "email":"sarah@gmail.com",
+            "phoneNo":"8877665544",
+            "username":"sarah"
+        },
+        {
+            "firstName":"Mahendra Singh",
+            "lastName": "Dhone",
+            "department": "RnD",
+            "gender":"Male",
+            "departmentId": "4",
+            "email":"mahendra@gmail.com",
+            "phoneNo":"4455667788",
+            "username":"hendra"
+        },
+        {
+            "firstName":"Jonny",
+            "lastName": "Sharma",
+            "department": "Sales",
+            "departmentId": "2",
+            "gender":"Male",
+            "email":"jonny@gmail.com",
+            "phoneNo":"1122334455",
+            "username":"jonny"
+        },
+        {
+            "firstName":"Jonny",
+            "lastName": "Sharma",
+            "department": "Sales",
+            "departmentId": "2",
+            "gender":"Male",
+            "email":"jonny@gmail.com",
+            "phoneNo":"1122334455",
+            "username":"jonny"
+        },
+        {
+            "firstName":"Jonny",
+            "lastName": "Sharma",
+            "department": "Sales",
+            "departmentId": "2",
+            "gender":"Male",
+            "email":"jonny@gmail.com",
+            "phoneNo":"1122334455",
+            "username":"jonny"
+        },
+        {
+            "firstName":"Jonny",
+            "lastName": "Sharma",
+            "department": "Sales",
+            "departmentId": "2",
+            "gender":"Male",
+            "email":"jonny@gmail.com",
+            "phoneNo":"1122334455",
+            "username":"jonny"
+        },
+        {
+            "firstName":"Jonny",
+            "lastName": "Sharma",
+            "department": "Sales",
+            "departmentId": "2",
+            "gender":"Male",
+            "email":"jonny@gmail.com",
+            "phoneNo":"1122334455",
+            "username":"jonny"
+        },
+        {
+            "firstName":"Jonny",
+            "lastName": "Sharma",
+            "department": "Sales",
+            "departmentId": "2",
+            "gender":"Male",
+            "email":"jonny@gmail.com",
+            "phoneNo":"1122334455",
+            "username":"jonny"
+        },
+        {
+            "firstName":"Jonny",
+            "lastName": "Sharma",
+            "department": "Sales",
+            "departmentId": "2",
+            "gender":"Male",
+            "email":"jonny@gmail.com",
+            "phoneNo":"1122334455",
+            "username":"jonny"
+        }
+    ]
+}
