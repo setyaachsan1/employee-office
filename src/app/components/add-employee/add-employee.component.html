@@ -1,0 +1,88 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row">
+            <div class="col-12 text-end">
+                <span><button class="btn btn-sm btn-primary" (click)="back()">Employee List</button></span>
+            </div>
+           
+        </div>
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-9 col-xl-12">
+                <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                    <div class="card-body p-4 p-md-5">
+                        <h4 class="mb-4 pb-2 pb-md-0">Employee Form</h4> 
+
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" style="font-size: 14px;" for="username">Username <span style="color: red;">&#42;</span></label>
+                                        <input type="text" id="username"[(ngModel)]="employeeSubmit.username" class="form-control form-control-lg" style="font-size: 0.85rem!important;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" style="font-size: 14px;" for="firstName">First Name <span style="color: red;">&#42;</span></label>
+                                        <input type="text" [(ngModel)]="employeeSubmit.firstName" id="firstName" class="form-control form-control-lg" style="font-size: 0.85rem!important;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" style="font-size: 14px;" for="lastName">Last Name <span style="color: red;">&#42;</span></label>
+                                        <input type="text" id="lastName" [(ngModel)]="employeeSubmit.lastName" class="form-control form-control-lg" style="font-size: 0.85rem!important;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" style="font-size: 14px;" for="email">Email <span style="color: red;">&#42;</span></label>
+                                        <input type="text" id="email" [(ngModel)]="employeeSubmit.email" class="form-control form-control-lg" style="font-size: 0.85rem!important;"/>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" style="font-size: 14px;" for="bod">Birthdate <span style="color: red;">&#42;</span></label>
+                                        <input type="date"[(ngModel)]="employeeSubmit.bod" id="bod" class="form-control form-control-lg" style="font-size: 0.85rem!important;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" style="font-size: 14px;" for="salary">Basic Salary</label>
+                                        <input type="text" id="salary" readonly="true" [(ngModel)]="employeeSubmit.salary" class="form-control form-control-lg" style="font-size: 0.85rem!important;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" style="font-size: 14px;" for="status">Status</label>
+                                        <input type="text" id="status" [readOnly]="true" [(ngModel)]="employeeSubmit.status" class="form-control form-control-lg" style="font-size: 0.85rem!important;"/>  
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" style="font-size: 14px;" for="group">Group</label>
+                                        <input type="text" [(ngModel)]="employeeSubmit.group" id="group" class="form-control form-control-lg" style="font-size: 0.85rem!important;"/>                                     
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" style="font-size: 14px;" for="description">Description</label>
+                                        <input type="text" id="description" readonly="true" [(ngModel)]="employeeSubmit.description" class="form-control form-control-lg" style="font-size: 0.85rem!important;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 pt-2">
+                                <p-toast></p-toast>
+                                <button type="button" pButton pRipple (click)="onCreateEmp()" label="Submit" value="Submit" class="p-button-success" [(ngModel)]="employeeSubmit"></button>   
+                            </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

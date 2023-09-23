@@ -8,12 +8,18 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { ToastModule } from 'primeng/toast';
+import { ButtonModule } from "primeng/button";
+import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    EmployeeDetailComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ToastModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
