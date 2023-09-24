@@ -8,6 +8,8 @@ import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+
 export class LoginComponent implements OnInit {
   eyeIcon = faEye;
   eyeSlashIcon= faEyeSlash;
@@ -24,6 +26,7 @@ export class LoginComponent implements OnInit {
   visible:boolean = true;
   changetype:boolean =true;
   icon:string='eyeIcon';
+  userLogin:any
 
   viewpass(){
     this.visible = !this.visible;
@@ -49,19 +52,30 @@ export class LoginComponent implements OnInit {
     password: ''
   };
   }
-  onLogin() {
+
+onLogin() {
   const localData = localStorage.getItem('signUpUsers');
-
-  if(localData == null || this.loginObj.EmailId != this.signupUsers[0].userName){
-    alert("Please Sign Up")
-  } else {
-    this.route.navigateByUrl('/home');
-    this.accService.onLogin(this.loginObj).subscribe((res: any) => {
-    localStorage.setItem('token',res.token);
-    this.route.navigateByUrl('/home');
-  })
-  }
   
+  if (localData == null) {
+    alert("Please Sign Up");
+  } else {
+    const users = JSON.parse(localData);
 
+    // Find a user with a matching email
+    const user = users.find((u: { userName: any; }) => u.userName === this.loginObj.EmailId);
+  console.log(user)
+    if (user) {
+      // Successful login
+        this.route.navigateByUrl('/home');
+        this.accService.onLogin(this.loginObj).subscribe((res: any) => {
+          localStorage.setItem('token', res.token);
+          this.route.navigateByUrl('/home');
+        });
+      }
+    else {
+      alert("User not found");
+    }
+  }
 }
+
 }
