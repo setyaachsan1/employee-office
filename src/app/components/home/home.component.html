@@ -1,4 +1,5 @@
 <section class="vh-100 gradient-custom">
+    <div class="login"><button class="btn btn-sm btn-success" style="background-color:#008000" disabled>Welcome back!<div [(ngModel)]="userLogin"></div></button></div>
     <div class="container py-5 h-100">
         <div class="row">
             <div class="col-12 text-end">
@@ -8,35 +9,87 @@
            
         </div>
         <div *ngIf="isListView" class="row justify-content-center align-items-center h-100">
+            <div class="row" >
+                <div class="col-9" style="display: flex; margin-left: 9rem;">
+                    <input type="text" class="form-control" placeholder="Search Employee" [(ngModel)]="searchText" (input)="onSearch()">
+                    <div class="zoom"><fa-icon [icon]="findIcon" style="float: right;"></fa-icon></div>
+                </div>
+            </div>
+
             <div class="col-12">
+                 
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>No</th>
-                            <th>Username</th>
-                            <th>FirstName</th>
-                            <th>LastName</th>
-                            <th>Email</th>
-                            <th>Action</th>
+                          <th>No</th>
+                      
+                            <th (click)="onSortbyUsername('username')">
+                                <div class="customColums">Username
+                                    <div style="margin-left: 10px;">
+                                        <fa-icon [icon]="sortIcon" *ngIf="sortbyusername === 'username' && sortOrder === 1 || sortbyusername === 'username' && sortOrder === -1"></fa-icon>
+                                    </div>
+                                </div>       
+                            </th>
+                       
+                            <th (click)="onSortbyFirstname('firstName')">
+                                <div class="customColums">FirstName
+                                    <div style="margin-left: 10px;">
+                                        <fa-icon [icon]="sortIcon" *ngIf="sortbyfirstname === 'firstName' && sortOrder === 1 || sortbyfirstname === 'firstName' && sortOrder === -1"></fa-icon>
+                                    </div>
+                                </div>
+                            </th>
+                          
+                            <th (click)="Onsortbylastname('lastName')">
+                                <div class="customColums">LastName
+                                    <div style="margin-left: 10px;">
+                                        <fa-icon [icon]="sortIcon" *ngIf="sortbylastname === 'lastName' && sortOrder === 1 || sortbylastname === 'lastName' && sortOrder === -1"></fa-icon>
+                                    </div>
+                                </div>
+                            </th>
+
+                            <th (click)="onSortsortbyemail('email')">
+                                <div class="customColums">Email
+                                    <div style="margin-left: 10px;">
+                                        <fa-icon [icon]="sortIcon" *ngIf="sortbyemail === 'email' && sortOrder === 1 || sortbyemail === 'email' && sortOrder === -1"></fa-icon>
+                                    </div>
+                                </div>
+                            </th>
+                          <th style="text-align: center;">Action</th>
                         </tr>
-                    </thead>
+                      </thead>
+                      
                     <tbody>
-                        <tr *ngFor="let emp of employeeList; let sr= index">
+                        <tr *ngFor="let emp of pagedEmployeeList; let sr= index">
                             <td>{{sr+1}}</td>
                             <td>{{emp.username}}</td>
                             <td>{{emp.firstName }}</td>
                             <td>{{emp.lastName}}</td>
                             <td>{{emp.email }} </td>
-                            <td>
-                                <span class="custom"><button class="btn btn-sm btn-primary" 
-                                    style="background-color: 
-                                    #008080!important; cursor: pointer;" (click)="onEdit(emp)">Edit</button></span>
-                                <button class="btn btn-sm btn-danger" style="cursor: pointer" (click)="onDelete(emp)">Delete</button>
+                            <td style="text-align: center;">
+                                <span class="custom">
+                                    <button class="btn btn-sm btn-primary" 
+                                        style="background-color: 
+                                     #F6BE00!important; color:black; cursor: pointer;" (click)="onEdit(emp)">
+                                        <span><fa-icon [icon]="pencilIcon" style="float: right;"></fa-icon></span>
+                                    </button>
+                               </span>
+                              
+                                <button pTooltip="are you sure want to delete this data" class="btn btn-sm btn-danger" style="cursor: pointer;" (click)="onDelete(emp)">
+                                    <span><fa-icon [icon]="trashIcon" style="float: right;"></fa-icon></span>
+                                </button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+               
+               
+                <p-paginator (onPageChange)="onPageChange($event)" [rows]="rows" [totalRecords]="employeeList.length" [rowsPerPageOptions]="[10]"></p-paginator>
+              
             </div>
         </div>
+        <p-toast class="custom-toast"></p-toast>
+        <p-confirmPopup >
+     
+        </p-confirmPopup>
     </div>
 </section>

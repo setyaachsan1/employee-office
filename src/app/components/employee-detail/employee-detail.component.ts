@@ -3,13 +3,13 @@ import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 
-
 @Component({
   selector: 'app-employee-detail',
   templateUrl: './employee-detail.component.html',
   styleUrls: ['./employee-detail.component.css'],
   providers: [MessageService]
 })
+
 export class EmployeeDetailComponent implements OnInit {
  
   employeeList: any[]=[];
@@ -23,7 +23,6 @@ export class EmployeeDetailComponent implements OnInit {
     "salary":"",
     "status":"",
     "group":"",
-    "desc":"",
   }
 
   constructor(
@@ -33,6 +32,10 @@ export class EmployeeDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const dateNow = new Date();
+    console.log(dateNow)
+    this.employeeObject.description=dateNow;
+
     const empData = localStorage.getItem('employeeDetailList');
     if(empData !=null){
       this.employeeList = JSON.parse(empData);
@@ -45,7 +48,6 @@ export class EmployeeDetailComponent implements OnInit {
        this.employeeObject.salary=item.salary
        this.employeeObject.status=item.status
        this.employeeObject.group=item.group
-       this.employeeObject.desc=item.desc
     }
    }
 
@@ -72,25 +74,6 @@ export class EmployeeDetailComponent implements OnInit {
         this.route.navigateByUrl('/home');
       }, 3000);
     }  
-          // uncomment line 81-93 if want to see data payload
-
-          // step by step
-          //  1. run json-server --watch postEmployee.json -p 3001 in terminal
-          //  2. comment code line 65-71 and uncomment code line 81-93
-          
-          // if(!payload.username || !payload.firstName || !payload.lastName || !payload.email || !payload.bod){
-          // this.messageService.add({ severity: 'warn', summary: 'Warning', detail: 'Please Fill the mandatory field!' });
-          // } else {
-          // this.http.post<any>("http://localhost:3001/submit", [{payload}]).subscribe((res:any)=>{
-          // this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Employee Created Succefully!' });
-          // setTimeout(() => {
-          //   this.route.navigateByUrl('/home');
-          // }, 3000);
-          // })
-          // setTimeout(() => {
-          // this.route.navigateByUrl('/home');
-          // }, 3000);
-          // }  
 
 }
 

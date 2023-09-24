@@ -12,6 +12,10 @@ import { ToastModule } from 'primeng/toast';
 import { ButtonModule } from "primeng/button";
 import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { PaginatorModule } from 'primeng/paginator';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { TooltipModule } from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,7 @@ import { AddEmployeeComponent } from './components/add-employee/add-employee.com
     LoginComponent,
     HomeComponent,
     EmployeeDetailComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,11 @@ import { AddEmployeeComponent } from './components/add-employee/add-employee.com
     BrowserAnimationsModule,
     FontAwesomeModule,
     ToastModule,
-    ButtonModule
+    ButtonModule,
+    PaginatorModule,
+    ConfirmPopupModule,
+    ConfirmDialogModule,
+    TooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,3 +2,31 @@
     margin: 10px;
     cursor: pointer;
 }
+
+.customColums{
+    display: flex;
+    cursor: pointer;
+}
+
+.popup{
+    margin-left: 10rem!important;
+}
+
+.custom-toast .ui-toast {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+
+.zoom{
+    transform: translate(-30px,10px);
+}
+
+.login{
+    margin: 10px;
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}

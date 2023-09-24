@@ -53,25 +53,6 @@ export class AddEmployeeComponent implements OnInit {
         this.route.navigateByUrl('/home');
       }, 3000);
     }  
-            // uncomment line 62-74 if want to see data payload
-
-            // step by step
-            //  1. run json-server --watch postEmployee.json -p 3001 in terminal
-            //  2. comment code line 65-71 and uncomment code line 62-74
-    
-            //   if(!payload.username || !payload.firstName || !payload.lastName || !payload.email || !payload.bod){
-            //   this.messageService.add({ severity: 'warn', summary: 'Warning', detail: 'Please Fill the mandatory field!' });
-            //   } else {
-            //   this.http.post<any>("http://localhost:3001/submit", [{payload}]).subscribe((res:any)=>{
-            //   this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Employee Created Succefully!' });
-            //   setTimeout(() => {
-            //     this.route.navigateByUrl('/home');
-            //   }, 3000);
-            //   })
-            //   setTimeout(() => {
-            //   this.route.navigateByUrl('/home');
-            //   }, 3000);
-            // }
      } 
 
   back(){
