@@ -2,25 +2,43 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
-## Development server
+Employee Office App
+version 0.0.1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Node: 18.18.0
+Package Manager: npm 9.8.1
 
-## Code scaffolding
+@angular-devkit/architect    0.1602.3 (cli-only)
+@angular-devkit/core         16.2.3 (cli-only)
+@angular-devkit/schematics   16.2.3 (cli-only)
+@schematics/angular          16.2.3 (cli-only)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Tools kit
+- Angular Material
+- Bootstrap
+- Primeng
+- Fontawesome
 
-## Build
+Default user login:
+username : admin
+password: admin
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Development server
 
-## Running unit tests
+Run `npm start for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Running 
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone git repo using HTTP clone https://github.com/setyaachsan1/employee-office.git
+2. Choose master branch
+3. Make new folder, open terminal and type git clone (url)
+4. After finish. Execute script npm install (make sure have node and angular cli supported in local) in terminal
+5. Open project using visual studio code (recommended)
+6. Open new terminal direct to project folder and execute script -> json-server --watch getEmployee.json
+7. After npm install finished, execute script npm start in new terminal (make sure point 6 is still running)
+8. Apps will load into sign up page, fill the forms and click login page
+9. If dont wanna signup, click login and fill the default user
+10. Apps will go through into home page
 
 ## Further help
 
