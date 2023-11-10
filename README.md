@@ -37,7 +37,7 @@ Run `npm start for a dev server. Navigate to `http://localhost:4200/`. The appli
 6. Open new terminal direct to project folder and execute script -> json-server --watch getEmployee.json
 7. After npm install finished, execute script npm start in new terminal (make sure point 6 is still running)
 8. Apps will load into sign up page, fill the forms and click login page
-9. If dont wanna signup, click login and fill the default user
+9. If dont wanna signup, click login and fill the default user (default username: admin, password: admin)
 10. Apps will go through into home page
 
 ## Further help
