@@ -34,9 +34,9 @@ Run `npm start for a dev server. Navigate to `http://localhost:4200/`. The appli
 3. Make new folder, open terminal and type git clone (url)
 4. After finish. Execute script npm install (make sure have node and angular cli supported in local) in terminal
 5. Open project using visual studio code (recommended)
-6. Open new terminal direct to project folder and execute script -> json-server --watch getEmployee.json
-7. After npm install finished, execute script npm start in new terminal (make sure point 6 is still running)
-8. Apps will load into sign up page, fill the forms and click login page
+6. After npm install finished, execute script json-server --watch getEmployee.json (make sure not to closed terminal for json server)
+7. Open new terminal to execute script npm start
+8. Apps will load into sign up page, fill the signup forms and click login page
 9. If dont wanna signup, click login and fill the default user (default username: admin, password: admin)
 10. Apps will go through into home page
 
