@@ -1,10 +1,10 @@
 <section class="vh-100 gradient-custom">
-    <div class="login"><button class="btn btn-sm btn-success" style="background-color:#008000" disabled>Welcome back!<div [(ngModel)]="userLogin"></div></button></div>
+    <div class="login"><button class="btn btn-sm btn-success" style="background-color:#008080" disabled>Welcome back! {{userLogin}}<div [(ngModel)]="userLogin"></div></button></div>
     <div class="container py-5 h-100">
         <div class="row">
             <div class="col-12 text-end">
                 <span class="custom"><button class="btn btn-sm btn-success" style="background-color: #008080" (click)="isListView()">Add Employee</button></span>
-                <span><button class="btn btn-sm btn-primary" (click)="logout()">Logout</button></span>
+                <span><button class="btn btn-sm btn-success" style="background-color: #008080" (click)="logout()">Logout</button></span>
             </div>
            
         </div>
@@ -69,7 +69,7 @@
                                 <span class="custom">
                                     <button class="btn btn-sm btn-primary" 
                                         style="background-color: 
-                                     #F6BE00!important; color:black; cursor: pointer;" (click)="onEdit(emp)">
+                                     navajowhite; color:black; cursor: pointer;" (click)="onEdit(emp)">
                                         <span><fa-icon [icon]="pencilIcon" style="float: right;"></fa-icon></span>
                                     </button>
                                </span>

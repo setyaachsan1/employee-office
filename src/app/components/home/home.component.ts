@@ -71,6 +71,7 @@ export class HomeComponent implements OnInit {
       this.userList = JSON.parse(user);
       console.log(this.userList[0].userName)
       this.userLogin=this.userList[0].userName
+      console.log(this.userLogin)
       }
     }
 

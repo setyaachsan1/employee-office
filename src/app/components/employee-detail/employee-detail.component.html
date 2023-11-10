@@ -1,11 +1,11 @@
 <section class="vh-100 gradient-custom">
     <div class="container py-5 h-100">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12 text-end">
                 <span><button class="btn btn-sm btn-primary" (click)="back()">Employee List</button></span>
             </div>
            
-        </div>
+        </div> -->
         <div class="row justify-content-center align-items-center h-100">
             <div class="col-12 col-lg-9 col-xl-12">
                 <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
@@ -78,8 +78,8 @@
 
                             <div class="mt-4 pt-2">
                                 <p-toast></p-toast>
-                                <button type="button" pButton pRipple (click)="onCreateEmp()" label="Submit" value="Submit" class="p-button-success" [(ngModel)]="employeeObject"></button>
-                               
+                                <button type="button" style="margin-right: 0.75rem;" pButton pRipple (click)="onCreateEmp()" label="Submit" value="Submit" class="p-button-success" [(ngModel)]="employeeObject"></button>
+                                <button type="button" pButton pRipple (click)="back()" label="Cancel" value="Cancel" class="p-button-danger"></button>      
                             </div> 
                     </div>
                 </div>
